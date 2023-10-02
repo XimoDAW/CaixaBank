@@ -1,23 +1,29 @@
 :root {
     --color-primary: #D9ECF3;
     --color-secondary: #007EAE;
-    --color-black: #ffffff;
+    --color-black: #000000;
+    --color-white: #ffffff;
     --color-shadow: #EEEEEE;
+    --color-background: #E5F5FC;
+    --color-text-secondary: #7A6666;
 }
 
-
 .c-card {
-    --color-background: var(--color-shadow);
+    --color-background-shadow: var(--color-shadow);
 
     display: flex;
-    box-shadow: 1px 1px 5px 1px var(--color-background);
+    box-shadow: 1px 1px 5px 1px var(--color-background-shadow);
     border-radius: 5px;
-    width: 450px;
+    width: 550px;
     margin: 15px 15px 15px 15px;
 }
 
+.c-card:hover {
+    cursor: pointer;
+}
+
 .c-card--colspan {
-    padding-right: 480px;
+    padding-right: 580px;
 }
 
 .c-card__button {
@@ -28,8 +34,28 @@
     color: var(--color-weak);
     margin: 20px 0px 0px 0px;
     padding: 5px;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 10px 10px 10px 10px;
     border-style: none;
+}
+
+.c-card__button:hover {
+    cursor: pointer;
+}
+
+.c-card__button--modify {
+    --color-weak: var(--color-secondary);
+    --color-strong: var(--color-background);
+
+    width: 140px;
+    font-weight: normal;
+    margin: 0px 0px 25px 0px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.c-card__button--modify:hover {
+    cursor: pointer;
 }
 
 .c-card__image {
@@ -38,25 +64,47 @@
 }
 
 .c-card__text {
-    width: 140px;
+    width: 250px;
     font-weight: bold;
     font-size: 20px;
 }
 
 .c-card__text--colspan {
-    width: 400px;
+    width: 500px;
     font-weight: bold;
     font-size: 20px;
 }
 
-.c-card--modify {
-    --color-background: var(--color-shadow);
+.c-card__text--modify {
+    --color-text: var(--color-text-secondary);
 
+    color: var(--color-text);
+    width: 140px;
+    font-weight: normal;
+    font-size: 17px;
+    text-align: center;
+}
+
+.c-card__image--modify {
+    margin: 0px;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.c-card__title--modify {
+    width: 140px;
+    font-weight: bold;
+    margin: 15px 0px 0px 0px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.c-card--modify {
     display: flex;
-    box-shadow: 1px 1px 5px 1px var(--color-background);
-    border-radius: 5px;
     width: 225px;
     margin: 15px 15px 15px 15px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .l-columns {
@@ -64,7 +112,8 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     width: 0px;
-    margin-left: 25%; 
+    margin-left: 10%;
+    margin-bottom: 50px;
 }
 
 .l-columns--2 {
@@ -72,8 +121,26 @@
 }
 
 .l-columns--4 {
-    --color-background: var(--color-background);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    background-color: #000000;
+}
+
+.l-columns--title {
+    grid-column: span 4;
+    width: 700px;
+    text-align: center;
+    padding-left: 230px;
+}
+
+.l-background {
+    --color-back: var(--color-white);
+
+    background-color: var(--color-back);
+}
+
+.l-background--modify {
+    --color-back: var(--color-background);
+    padding: 50px 0px 15px 0px;
 }
