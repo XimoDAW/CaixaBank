@@ -9,15 +9,15 @@
 .c-card {
     --color-background: var(--color-shadow);
 
+    display: flex;
     box-shadow: 1px 1px 5px 1px var(--color-background);
     border-radius: 5px;
-    width: 350px;
-    padding: 50px 0px 50px 0px;
+    width: 450px;
     margin: 15px 15px 15px 15px;
 }
 
 .c-card--colspan {
-    padding-right: 384px;
+    padding-right: 480px;
 }
 
 .c-card__button {
@@ -26,6 +26,37 @@
 
     background-color: var(--color-strong);
     color: var(--color-weak);
+    margin: 20px 0px 0px 0px;
+    padding: 5px;
+    border-radius: 5px 5px 5px 5px;
+    border-style: none;
+}
+
+.c-card__image {
+    margin: 20px 20px 20px 20px;
+    border-radius: 5px;
+}
+
+.c-card__text {
+    width: 140px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.c-card__text--colspan {
+    width: 400px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.c-card--modify {
+    --color-background: var(--color-shadow);
+
+    display: flex;
+    box-shadow: 1px 1px 5px 1px var(--color-background);
+    border-radius: 5px;
+    width: 225px;
+    margin: 15px 15px 15px 15px;
 }
 
 .l-columns {
@@ -38,4 +69,11 @@
 
 .l-columns--2 {
     grid-column: span 2;
+}
+
+.l-columns--4 {
+    --color-background: var(--color-background);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
