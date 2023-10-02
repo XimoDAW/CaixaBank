@@ -1,0 +1,41 @@
+:root {
+    --color-primary: #D9ECF3;
+    --color-secondary: #007EAE;
+    --color-black: #ffffff;
+    --color-shadow: #EEEEEE;
+}
+
+
+.c-card {
+    --color-background: var(--color-shadow);
+
+    box-shadow: 1px 1px 5px 1px var(--color-background);
+    border-radius: 5px;
+    width: 350px;
+    padding: 50px 0px 50px 0px;
+    margin: 15px 15px 15px 15px;
+}
+
+.c-card--colspan {
+    padding-right: 384px;
+}
+
+.c-card__button {
+    --color-strong: var(--color-primary);
+    --color-weak: var(--color-secondary);
+
+    background-color: var(--color-strong);
+    color: var(--color-weak);
+}
+
+.l-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 0px;
+    margin-left: 25%; 
+}
+
+.l-columns--2 {
+    grid-column: span 2;
+}
