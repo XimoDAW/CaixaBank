@@ -8,8 +8,45 @@
     --color-text-secondary: #7A6666;
 }
 
-*{
+* {
     font-family: sans-serif;
+}
+
+.c-button {
+
+    --c-button-strong-color: var(--color-primary);
+    --c-button-weak-color: var(--color-secondary);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 28px 14px 28px;
+
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+
+    border-color: var(--c-button-strong-color);
+    background-color: var(--c-button-strong-color);
+    color: var(--c-button-weak-color);
+
+}
+
+.c-button--more{
+
+    --c-button-strong-color: var(--color-secondary);
+    --c-button-weak-color: var(--color-primary);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    
+
+    color: var(--c-button-strong-color);
+
 }
 
 .c-card {
@@ -22,12 +59,21 @@
     margin: 15px 15px 15px 15px;
 }
 
-.c-card-image{
+.c-card-image {
     display: flex;
     justify-content: center;
 }
 
-.c-card--vertical{
+.c-title {
+    --c-title-color: var(--color-black);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--c-title-color);
+}
+
+.c-card--vertical {
     box-shadow: none;
     width: 250px;
 
@@ -35,35 +81,88 @@
     flex-direction: column;
 }
 
-.c-subtitle--litle{
+.c-card--main{
+    background-color: #eff8fb;
+    padding: 120px 100px 100px 100px;
+    width: 550px;
+}
+
+.c-card--small{
+
+    background-color: #ffffff;
+    padding: 20px 80px 20px 10px;
+    height: 50px;
+    width: 150px;
+    
+    display: flex;
+
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #333333;
+}
+
+.c-subtitle--litle {
     text-align: center;
     margin-bottom: 1px;
 }
 
-.c-card-img--big{
+.c-card-img--big {
     width: 500px;
     height: auto;
 }
 
-.c-text{
+.c-text {
     text-align: center;
     margin-top: 1px;
 }
 
-.c-link{
-    --color-link: var( --color-secondary);
+.c-needs{
+    padding-top: 30px;
+}
 
-    color: var( --color-link);
+
+.c-banner{
+    display: flex;
+    align-items: center;
+    background-image: url("../Proyecto_Caixabank/Imagenes/Terrat-abrir-cuenta_VF_1920x480.jpg");
+    height: 400px;
+}
+
+.c-text--bold{
+    --c-title-color: var(--color-black);
+
+    font-family: sans-serif;
+    font-size: 16px;
+    color: var(--c-title-color);
+    font-weight: bold;
+}
+
+
+.c-link {
+    --color-link: var(--color-secondary);
+
+    color: var(--color-link);
     display: flex;
     justify-content: center;
 }
 
-.c-logo{
+.c-logo {
     width: 200px;
     height: auto;
 }
 
-.c-subtitle{
+.c-subtitle {
+    --c-title-color: var(--color-black);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--c-title-color);
+    text-align: center;
+}
+
+.c-subtitle--center {
     text-align: center;
 }
 
@@ -165,7 +264,7 @@
     margin-bottom: 50px;
 }
 
-.l-head{
+.l-head {
     display: flex;
     justify-content: center;
 }
@@ -178,17 +277,24 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    background-color: #000000;
+    
 }
 
-.l-colums--3{
+.l-columns--4-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.l-colums--3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0px 200px 0px 200px;
 }
 
-.l-colums--padding{
+.l-colums--padding {
     padding: 0px 0px 0px 0px;
 }
 

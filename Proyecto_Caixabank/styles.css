@@ -68,7 +68,6 @@
 .c-text {
     --c-title-color: var(--color-black);
 
-    font-family: sans-serif;
     font-size: 16px;
     color: var(--c-title-color);
 }
